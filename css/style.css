@@ -1,0 +1,442 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url(../fonts/TTLakes-Regular.woff2) format('woff2'),
+        url(../fonts/TTLakes-Regular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url(../fonts/TTLakes-Medium.woff2) format('woff2'),
+        url(../fonts/TTLakes-Medium.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url(../fonts/TTLakes-Bold.woff2) format('woff2'),
+        url(../fonts/TTLakes-Bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.page {
+    font-family: 'TT Lakes';
+    margin: 0 auto;
+    overflow-x: hidden;
+    background: #f8f8f8;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.header {
+    background: #fff;
+    min-height: 88px;
+
+}
+
+/* Навигация */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__left-side {
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+}
+
+.nav__burger {
+    background-image: url(../images/burger.svg);
+    background-repeat: no-repeat;
+    padding: 20px 20px;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav__logo {
+    padding-top: 5px;
+    padding-left: 17px;
+}
+
+.nav__socials {
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+}
+
+.nav__call,
+.nav__chat,
+.nav__profile,
+.nav__divider,
+.services__ticket,
+.about__hide-text {
+    display: none;
+}
+
+.nav__search {
+    display: flex;
+    align-items: center;
+}
+
+.nav__repair {
+    position: relative;
+    background-image: url(../images/repair.svg);
+    background-repeat: no-repeat;
+    padding: 20px 20px;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    display: block;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.nav__repair::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -20px;
+    height: 32px;
+    width: 2px;
+    border-radius: 1px;
+    background-color: #eaeaea;
+    pointer-events: none;
+}
+
+.nav__checkstatus {
+    box-sizing: border-box;
+    background-image: url(../images/checkstatus.svg);
+    background-repeat: no-repeat;
+    padding: 20px 20px;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    display: block;
+    cursor: pointer;
+}
+
+.nav__search {
+    padding-left: 10px;
+}
+
+/* Услуги и сервисы */
+
+.services__title {
+    margin-bottom: -10px;
+}
+
+.services__heading {
+    margin-top: 20px;
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 143%;
+    letter-spacing: -0.02em;
+    color: #1b1c21;
+}
+
+.about__text {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.01em;
+    color: #1b1c21;
+}
+
+.services__scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.services__list {
+    padding: 0;
+}
+
+.services__item {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: #7e7e82;
+    padding-right: 16px;
+    margin-right: 30px;
+    list-style: none;
+}
+
+.services__item--focus {
+    border: 2px solid #b8ffec;
+    background-color: #FFF;
+    border-radius: 6px;
+    padding: 8px 16px;
+
+}
+
+.services__heading::before {
+    content: url(../images/highlight.svg);
+    position: absolute;
+    left: 1px;
+}
+
+/* О нас */
+
+.about__link-more {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: #1B1C21;
+}
+
+.about__link-more::before {
+    content: url(../images/expand.svg);
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 8px;
+}
+
+.about__img {
+    min-width: 320px;
+    min-height: 176px;
+}
+
+.about__img-size {
+    width: 100%;
+    height: auto;
+}
+
+
+@media (min-width: 768px) {
+
+    .container {
+        padding: 0 24px;
+    }
+
+    .nav__logo {
+        position: relative;
+        margin-left: 17px;
+    }
+
+    .nav__logo::after {
+        content: url("");
+        position: absolute;
+        margin-top: 5px;
+        left: 1px;
+        top: 10px;
+        width: 2px;
+        height: 32px;
+        background-color: #eaeaea;
+    }
+
+    .nav__socials {
+        margin-left: 251px;
+        align-items: center;
+    }
+
+    .nav__chat {
+        background-image: url(../images/chat.svg);
+        background-repeat: no-repeat;
+        padding: 20px 20px;
+        background-position: center;
+        background-color: transparent;
+        border: none;
+        display: block;
+        display: block;
+        margin-right: 16px;
+        cursor: pointer;
+    }
+
+    .nav__call {
+        background-image: url(../images/call.svg);
+        background-repeat: no-repeat;
+        padding: 20px 20px;
+        background-position: center;
+        background-color: transparent;
+        border: none;
+        display: block;
+        margin-right: 16px;
+        cursor: pointer;
+    }
+
+    .nav__profile {
+        display: block;
+        background-image: url(../images/profile.svg);
+        background-repeat: no-repeat;
+        padding: 20px 20px;
+        background-position: center;
+        background-color: transparent;
+        border: none;
+        display: block;
+        cursor: pointer;
+        margin-right: 27px;
+    }
+
+    .nav__divider {
+        display: block;
+        padding: 0 20px;
+    }
+
+    .nav__divider-second {
+        display: none;
+    }
+
+    .nav__socials {
+        display: flex;
+    }
+
+    .services__ticket {
+        display: none;
+    }
+
+    .about__hide-text {
+
+        display: block;
+    }
+
+    .about__second-hide {
+        display: none;
+    }
+
+    .about {
+        display: flex;
+    }
+
+    .about__img-size {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .about__img {
+        min-width: 360px;
+        min-height: 208px;
+        padding-right: 32px;
+    }
+}
+
+.about__text {
+    padding-right: 24px;
+}
+
+@media (min-width: 1120px) {
+
+    .services,
+    .about {
+        margin: 0 auto;
+        max-width: 1120px;
+    }
+
+    .container {
+        padding: 0 32px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .services__title {
+        margin-top: 42px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .services__heading {
+        margin: 0;
+    }
+
+    .services__heading::before {
+        content: url(../images/highlight.svg);
+        position: relative;
+        padding-right: 30px;
+        vertical-align: middle;
+    }
+
+    .services__list {
+        margin-left: 32px;
+    }
+
+    .services__request {
+        background-image: url(../images/repair.svg);
+        background-repeat: no-repeat;
+        padding-right: 60px;
+        background-position: right center;
+        background-color: transparent;
+        border: none;
+        margin-right: 32px;
+    }
+
+    .services__status {
+        background-image: url(../images/checkstatus.svg);
+        background-repeat: no-repeat;
+        padding-right: 60px;
+        background-position: right center;
+        background-color: transparent;
+        border: none;
+    }
+
+    .services__list {
+        margin-top: 15px;
+        white-space: wrap;
+    }
+
+    .services__item--margin {
+        margin-left: 16px;
+        margin-top: 10px;
+    }
+
+    .services__ticket {
+        display: flex;
+        margin-right: 40px;
+    }
+
+    .services__request,
+    .services__status {
+        color: #1B1C21;
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .about__text {
+        padding-top: 10px;
+    }
+
+    .about__img-size {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .about__img {
+        min-width: 532px;
+        min-height: 307px;
+        margin-top: 20px;
+        padding-right: 40px;
+    }
+
+    .about__hide-text {
+        display: block;
+    }
+}
